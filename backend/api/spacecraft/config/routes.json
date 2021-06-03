@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/spacecrafts",
+      "handler": "spacecraft.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/spacecrafts/count",
+      "handler": "spacecraft.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/spacecrafts/:id",
+      "handler": "spacecraft.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/spacecrafts",
+      "handler": "spacecraft.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/spacecrafts/:id",
+      "handler": "spacecraft.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/spacecrafts/:id",
+      "handler": "spacecraft.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
