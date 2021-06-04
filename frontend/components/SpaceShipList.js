@@ -39,7 +39,26 @@ function SpaceShipList(props) {
         <Row>
           {searchQuery.map((spaceship) => (
             <Col xs="6" sm="4" key={spaceship.id}>
-              {spaceship.name}
+              <Card style={{ margin: "0 0.5rem 20px 0.5rem" }}>
+                <CardImg
+                  top={true}
+                  style={{ height: 250 }}
+                  src={`${process.env.NEXT_PUBLIC_API_URL}${spaceship.image[0].url}`}
+                />
+
+                <CardBody>
+                  <CardTitle>{spaceship.name}</CardTitle>
+                  <CardText>{spaceship.description}</CardText>
+                </CardBody>
+                <div className="card-footer">
+                  <Link
+                    as={`/spaceships/${spaceship.id}`}
+                    href={`/spaceships/${spaceship.id}`}
+                  >
+                    <a className="btn btn-primary">View</a>
+                  </Link>
+                </div>
+              </Card>
             </Col>
           ))}
         </Row>
