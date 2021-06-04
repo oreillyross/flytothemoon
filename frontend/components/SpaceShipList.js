@@ -61,12 +61,20 @@ function SpaceShipList(props) {
               </Card>
             </Col>
           ))}
+          <style jsx global>
+                {`
+                  a {
+                    color: white;
+                  }
+                `}
+          </style>
         </Row>
       );
     }
   }
 
-  return <>SOMETHING HERE</>;
+
+  return <>Add Soaceships</>;
 }
 
 export default SpaceShipList;
