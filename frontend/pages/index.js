@@ -18,9 +18,16 @@ export default () => {
             <Input onChange={e => updateQuery(e.target.value.toLocaleLowerCase())} value={query}/>
             </InputGroup>
           </div>
+          <style jsx>
+          {`
+            margin: 20px;
+            width: 500px;
+          `}
+        </style>
           <SpaceShipList search={query}/>
           </Col>
         </Row>
+        
       </div>
     </>
   );
