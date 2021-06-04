@@ -1,9 +1,9 @@
-import { Alert, Button } from "reactstrap";
+import SpaceShipList from "../components/SpaceShipList"
 
+console.log(process.env)
 export default () => (
   <>
     <h1>Welcome to NextJS and Strapi</h1>
-    <Alert>Hello to the Moon Flights</Alert>&nbsp;{" "}
-    <Button color="primary">Fly me to the Moon</Button>
+    <SpaceShipList search="f"/>
   </>
 );

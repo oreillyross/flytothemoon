@@ -2,8 +2,9 @@ import React from "react";
 import App from "next/app";
 import Head from "next/head";
 import Layout from "../components/Layout";
+import withData from "../lib/apollo"
 
-export default class MoonApp extends App {
+class MoonApp extends App {
   render() {
     const { Component, pageProps } = this.props;
     return (
@@ -23,3 +24,5 @@ export default class MoonApp extends App {
     );
   }
 }
+
+export default withData(MoonApp)
